@@ -4,6 +4,8 @@
  */
 package problema02;
 
+import paquete02.EquivalenteHora;
+
 /**
  *
  * @author UTPL
@@ -11,7 +13,22 @@ package problema02;
 public class Ejecutor {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Creacion del objeto de tipo EquivalenteHora
+        EquivalenteHora eh = new EquivalenteHora();
+        //valores de entrada
+        double hora = 1000;
+        //Asignacion de los valores a los atributos
+        eh.establecerHora(hora);
+        
+        eh.calcularMinutos();
+        eh.calcularSegundos();
+        eh.calcularDias();
+        
+        //Presentacion en pantalla
+        System.out.printf("\nCantidad de horas : %.2f" + "\nEquivalente en: " +
+                "\n Minutos : %.2f" + "\n Segundos : %.2f" + "\n Días : %.2f \n",
+                eh.obtenerHora(),eh.obtenerMinutos(),eh.obtenerSegundos(),
+                eh.obtenerDias());
     }
 
 }
